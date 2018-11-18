@@ -1,5 +1,7 @@
 import faker from 'faker';
 import AppController from './AppController';
+import getGeoLocation from '../geoLocation';
+
 /**
  * Handle the Scooter Request like list and more.
  */
@@ -23,11 +25,15 @@ class ScooterController extends AppController {
 		this.data.scooters = [];
 
 		for (let i = 0; i < 50; i++) {
+			
+			let location = getGeoLocation(1.290270, 103.851959, 1000);
+
 			this.data.scooters.push({
-				lat: faker.address.latitude,
-				long: faker.address.longitude,
-				battery: faker.random.number(10, 100),
-				serial_code: faker.random.number(1000, 9999),
+				lat: location.latitude,
+				lng: location.longitude,
+				battery: faker.random.number(100),
+				serial_code: faker.random.number(9999),
+				id: faker.random.uuid(),
 			});
 		}
 
