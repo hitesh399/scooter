@@ -1,0 +1,11 @@
+{
+  "name": "reactjs-sample-project",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
