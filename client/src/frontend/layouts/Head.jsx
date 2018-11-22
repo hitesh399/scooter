@@ -18,7 +18,7 @@ class Head extends React.Component {
 					<Link to="/">
 						<img src={logoUrl} alt="Scooter"/>
 					</Link>						
-					 <Typography variant="h6" color="inherit" className={classes.grow}>
+					 <Typography variant="title" color="inherit" className={classes.grow}>
 
 						<Link to="/">Singsys Pvt. Lte.</Link>
 					</Typography>

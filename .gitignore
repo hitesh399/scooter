@@ -4,3 +4,5 @@ server/yarn.lock
 client/yarn.lock
 client/package-lock.json
 server/package-lock.json
+client/dist
+server/dist
