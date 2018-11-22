@@ -3,7 +3,8 @@ import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 const  logoUrl = require('../assets/images/scooter-icon.png');
 import Typography from '@material-ui/core/Typography';
-
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 class Head extends React.Component {
 
@@ -14,10 +15,15 @@ class Head extends React.Component {
 
 			<AppBar className={classes.appBar}>
 				<Toolbar>
-				  <img src={logoUrl} alt="Scooter"/>
-				  <Typography variant="headline" color="inherit" noWrap>
-				    Singsys Pvt. Lte.
-				  </Typography>
+					<Link to="/">
+						<img src={logoUrl} alt="Scooter"/>
+					</Link>						
+					 <Typography variant="h6" color="inherit" className={classes.grow}>
+
+						<Link to="/">Singsys Pvt. Lte.</Link>
+					</Typography>
+					<Button><Link to="/trip">Trip</Link></Button>				
+
 				</Toolbar>
 			</AppBar>
 		);

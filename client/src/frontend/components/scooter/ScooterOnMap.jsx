@@ -10,6 +10,7 @@ import { typography } from '@material-ui/core/styles';
 import API from '../../aep';
 import {geolocated} from 'react-geolocated';
 const  iconMarker = require('../../assets/images/scooter-icon.png');
+
 class GoogleMapsContainer extends React.Component {
 
   constructor(props) {
@@ -28,22 +29,15 @@ class GoogleMapsContainer extends React.Component {
 
   componentWillMount() {
 
-    console.log('Component is  going to mount..')
-    console.log(this.props)
-
     this.props.callApi(API.SCOOTER_LIST, {})
       .then( (response)  => {
 
-          console.log('Here.....');
-          console.log(response);
       })
   }
 
    onMarkerClick (props, marker, e) {
 
-    console.log('hi.........');
-    console.log(props);
-    console.log(marker);
+
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -83,6 +77,10 @@ class GoogleMapsContainer extends React.Component {
           return Math.round(dist).toFixed(2);
         }
   }
+
+  /**
+   * Calculate the login user distance from the selected scooter.
+   */
   getDistance(lat, lng) {
 
     if(!this.props.isGeolocationAvailable) {
@@ -143,7 +141,6 @@ class GoogleMapsContainer extends React.Component {
           />
 
       )}
-
        
         <InfoWindow
 

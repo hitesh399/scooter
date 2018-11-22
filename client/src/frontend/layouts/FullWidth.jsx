@@ -18,8 +18,7 @@ class FullWidth extends React.Component {
 	render() {
 
 		const {classes} = this.props;
-		console.log('this.propsthis.propsthis.props');
-		console.log(this.props);
+	
 		return (
 
 			 <MuiThemeProvider theme={theme}>
@@ -31,7 +30,7 @@ class FullWidth extends React.Component {
 					{this.props.children}
 				</main>
 
-				<Footer {...this.props} />
+				<Footer {...this.props} theme={theme}/>
 			 </MuiThemeProvider>
 		)
 	}

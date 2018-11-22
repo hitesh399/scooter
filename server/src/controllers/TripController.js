@@ -24,9 +24,10 @@ class TripController extends AppController {
 
 		for (let i = 0; i < 50; i++) {
 			this.data.trips.push({
-				trip_date: faker.date.past,
-				trip_duration: faker.random.number(10, 200),
-				vehicle_id: faker.random.number(1000, 9999),
+				id: faker.random.uuid(),
+				trip_date: faker.date.past(),
+				trip_duration: faker.random.number(200),
+				vehicle_id: faker.random.number(9999),
 			});
 		}
 

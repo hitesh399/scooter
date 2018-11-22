@@ -14,7 +14,12 @@ export const styles = theme => ({
     position: 'fixed',
     width:'100%'
   },
-
+  grow: {
+    flexGrow: 1,
+  },
+  root: {
+    flexGrow: 1,
+  },
   main: {
 
     width: '100%',
