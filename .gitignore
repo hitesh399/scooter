@@ -2,3 +2,5 @@ server/node_modules
 client/node_modules
 server/yarn.lock
 client/yarn.lock
+client/package-lock.json
+server/package-lock.json
