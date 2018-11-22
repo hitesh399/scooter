@@ -20,7 +20,7 @@ class Head extends React.Component {
 					</Link>						
 					 <Typography variant="title" color="inherit" className={classes.grow}>
 
-						<Link to="/">Singsys Pvt. Lte.</Link>
+						<Link to="/">Singsys Pte. Ltd.</Link>
 					</Typography>
 					<Button><Link to="/trip">Trip</Link></Button>				
 
